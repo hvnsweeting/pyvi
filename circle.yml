@@ -1,7 +1,9 @@
 machine:
   post:
-    - pyenv 3.5.2
+    - pyenv global 3.5.2
 
 test:
   pre:
     - mkdir -p $CIRCLE_TEST_REPORTS/reports
+  override:
+    - make ci
