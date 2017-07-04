@@ -1,13 +1,10 @@
-machine:
-  post:
-    - pyenv global 3.4.4
-
-dependencies:
-  pre:
-    - pip install flake8
-
-test:
-  pre:
-    - mkdir -p $CIRCLE_TEST_REPORTS/reports
-  override:
-    - make ci
+version: 2
+jobs:
+  build:
+    working_directory: ~/circulate
+    docker:
+      - image: python:3.5.2
+    steps:
+      - checkout
+      - run: pip install flake8
+      - run: make ci
