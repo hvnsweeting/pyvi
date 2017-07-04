@@ -1,0 +1,7 @@
+machine:
+  post:
+    - pyenv 3.5.2
+
+test:
+  pre:
+    - mkdir -p $CIRCLE_TEST_REPORTS/reports
