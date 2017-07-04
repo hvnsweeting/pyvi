@@ -6,6 +6,12 @@
 
 This is alpha version.
 
+# Installing
+
+```
+pip install pytho
+```
+
 # Usage
 
 ```
